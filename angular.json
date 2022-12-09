@@ -23,6 +23,16 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "assets": [
+              {
+                "glob": "**/*.svg",
+                "input": "node_modules/@ignite/web-components/dist/ignite/svg",
+                "output": "./svg"
+              },
+              {
+                "glob": "**/*.json",
+                "input": "node_modules/@ignite/web-components/dist/ignite/localization/translations/ukg",
+                "output": "./localization/translations/ukg"
+              },
               "src/favicon.ico",
               "src/assets"
             ],
@@ -116,5 +126,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "c1f79d04-11ef-4596-b957-d24f38251000"
   }
 }

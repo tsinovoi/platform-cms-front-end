@@ -1,0 +1,27 @@
+<h1>UKG Calendar Events</h1>
+<ukg-data-table-container width="100%">
+  <ukg-data-table class="custom-cells-padding">
+    <table id="table" *ngIf="events$ | async as events">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Title</th>
+          <th>All Day Event?</th>
+          <th>Category</th>
+          <th>Start Date</th>
+          <th>End Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr id="ukg-table-row" *ngFor="let event of events">
+            <td>{{event.id}}</td>
+            <td>{{event.title}}</td>
+            <td>{{event.allDay}}</td>
+            <td>{{event.category}}</td>
+            <td>{{event.startDate}}</td>
+            <td>{{event.endDate}}</td>
+        </tr>
+      </tbody>
+    </table>
+    </ukg-data-table>
+</ukg-data-table-container>
